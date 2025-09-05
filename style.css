@@ -503,6 +503,7 @@ footer {
   display: none;
   font-size: 24px;
   cursor: pointer;
+
 }
 
 /* Responsive CSS */
@@ -528,7 +529,17 @@ footer {
 
   .menu-toggle {
     display: block;
+            margin-left: 165px;
   }
+  .nav-icons {
+    margin-left: -100px;
+  }
+  .map iframe {
+    width: 100%;
+  border: 0;
+  margin-top: 30px;
+  border-radius: 10px;
+}
 }
 
 
@@ -634,7 +645,7 @@ footer {
         max-width: 100%;
       }
       .btn {
-        margin-left: 0;
+                margin-left: 105px;
       }
     }
 
@@ -844,3 +855,82 @@ footer {
     width: auto;
    }/* Small mobile = 1 image */
     }
+
+
+
+
+
+
+
+
+
+
+
+    .btn {
+  background: #0ea5a4;
+  color: white;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* Modal background */
+.modal {
+  position: fixed;
+  left: 0; top: 0; right: 0; bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.4);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.18s;
+}
+
+.modal.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Modal card */
+.card {
+  background: white;
+  padding: 20px 18px;
+  border-radius: 10px;
+  width: 320px;
+  text-align: center;
+}
+
+.small {
+  font-size: 14px;
+  color: #334155;
+  margin-top: 8px;
+}
+
+/* Buttons inside modal */
+.copy-btn {
+  margin-top: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.close-btn {
+  margin-top: 10px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: #e5e7eb;
+  border: none;
+  cursor: pointer;
+}
