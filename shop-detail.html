@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruitables - Shop Detail</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://kit.fontawesome.com/yourfontawesomekey.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="top-left">
+      <span><i class="fas fa-phone"></i>  +91-9672232736</span>
+     
+    </div>
+    <div class="top-right">
+       <i class="fas fa-envelope"></i>
+      <a href="#">karansharma2736@gmail.com</a>  
+     
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo"><img src="./image/green-saraswati-logo-1.png" class="logo-img" alt=""></div>
+
+    <!-- Toggle Button -->
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="shop-detail.html">Shop Detail</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-icons">
+      <i class="fas fa-search"></i>
+      <i class="fas fa-shopping-cart"></i>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <h1>Product Details</h1>
+    
+  </section>
+
+  <!-- Product Detail Section -->
+  <section class="product-detail">
+    <div class="product-detail-image">
+      <img src="./image/ganesh.png" alt="Apples">
+    </div>
+    <div class="product-detail-info">
+      <h2>ganesh statue</h2>
+      
+      <p class="description">
+       We offer an assortment of Hindu god statue Marble Lord Ganesha that is carved using qualitative marble. Elaborately intentional, these Hindu god statues have the uncommon eminence of royalty stamped on it. Our marble Sculpture are available in variable sizes, luminous colours, and are polished to a glossy and brooding flawlessness. We also customize our statues as per customer requirements.
+      </p>
+
+      <div class="quantity-box">
+        <label for="qty">Quantity:</label>
+        <input type="number" id="qty" min="1" value="1">
+      </div>
+
+      <button class="add-cart">Add to Cart</button>
+    </div>
+  </section>
+
+  <!-- Related Products -->
+  <section class="products">
+    <h2>Related Products</h2>
+    <div class="product-list">
+      <div class="product-card">
+        <img src="./image/khatu shyam.png" alt="Oranges">
+        <h3>khatu shyam statue</h3>
+       
+      </div>
+
+      <div class="product-card">
+        <img src="./image/maa.png" alt="Grapes">
+        <h3> Maa durga marble statue</h3>
+        
+      </div>
+
+      <div class="product-card">
+        <img src="./image/shiav.png" alt="Bananas">
+        <h3>marble shiav statue</h3>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+  <div class="footer-container">
+
+    <!-- About Section -->
+    <div class="footer-col">
+      <h3><img src="./image/Logo_img_2.png" class="logo-img" alt=""></h3>
+      <p>
+        At Saraswati Murti Kala Kendra, we specialize in crafting exquisite marble statues and idols that blend traditional artistry with modern finishing !
+      </p>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="shop-detail.html">Shop Detail</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Customer Service -->
+    <div class="footer-col">
+      <h4>Customer Service</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Refund Policy</a></li>
+        <li><a href="#">Help & FAQs</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <p><i class="fas fa-map-marker-alt"></i> Ward No.11, Teh-Govindgarh, Ramgarh Road, Nitu Kabadi Ki Mill Ke Pass, Ramwas, Govindgarh, Alwar, Rajasthan-301604</p>
+      <p><i class="fas fa-envelope"></i> karansharma2736@gmail.com</p>
+      <p><i class="fas fa-phone"></i> +91-9672232736</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 saraswatimurtikalakendra | All Rights Reserved</p>
+  </div>
+</footer>
+
+
+
+   <script>
+    const toggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav-menu");
+
+    toggle.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>
