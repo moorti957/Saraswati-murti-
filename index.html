@@ -9,6 +9,8 @@
   <script src="https://kit.fontawesome.com/yourfontawesomekey.js" crossorigin="anonymous"></script>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
+
 <body>
 
   <!-- Top Bar -->
@@ -26,7 +28,7 @@
 
   <!-- Navbar -->
    <header class="navbar">
-    <div class="logo"><img src="green-saraswati-logo-1.png" class="logo-img" alt=""></div>
+  <div class="logo"> <a href="index.html"><img src="green-saraswati-logo-1.png" class="logo-img" alt=""></a></div>
 
     <!-- Toggle Button -->
     <div class="menu-toggle" id="menu-toggle">
@@ -126,7 +128,7 @@
         <p>Completely hand-carved by expert artisans with detailed attention to Kali Maa's iconic features. Smooth</p>
         <div class="price-cart">
          
-          <button>Add to Cart</button>
+          <a href="contact.html"><button>Add to Cart</button></a>
         </div>
       </div>
 
@@ -136,7 +138,7 @@
         <p>Here we can see Marble Saraswati Mata Murti made in pure white natural makrana Marble </p>
         <div class="price-cart">
           
-          <button>Add to Cart</button>
+          <a href="contact.html"><button>Add to Cart</button></a>
         </div>
       </div>
 
@@ -146,7 +148,7 @@
         <p>Here we can see Marble Krishna Murti designed in Pure white Makrana Marble with well designing done from each and every sides.</p>
         <div class="price-cart">
         
-          <button>Add to Cart</button>
+         <a href="contact.html"><button>Add to Cart</button></a> 
         </div>
       </div>
 
@@ -156,7 +158,7 @@
         <p>A Shivji Marble Statue is a stunning piece of art that depicts Lord Shiva,</p>
         <div class="price-cart">
         
-          <button>Add to Cart</button>
+          <a href="contact.html"><button>Add to Cart</button></a> 
         </div>
       </div>
     </div> 
@@ -237,6 +239,24 @@
 
       
   </section>
+
+   <button class="btn" id="inquiryBtn" aria-label="Call Inquiry">
+    Inquiry / कॉल करें
+  </button>
+
+  <!-- Modal fallback for desktop -->
+  <div id="fallbackModal" class="modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="card" role="document">
+      <h3>कॉल करने का नंबर</h3>
+      <p class="small" id="phoneText">+91 12345 67890</p>
+      <p class="small">अगर डायलर नहीं खुला, तो नीचे कॉपी करके अपने फोन से कॉल करें।</p>
+      <button class="copy-btn" id="copyBtn">नंबर कॉपी करें</button>
+      <div class="modal-actions">
+        <button class="close-btn" onclick="closeModal()">बंद करें</button>
+      </div>
+    </div>
+  </div>
+
 
 
 
@@ -415,5 +435,59 @@
 
     window.addEventListener('resize', updateMarbleSlider);
   </script>
+
+
+
+<script>
+  const PHONE_NUMBER = '+91-7976519723';
+
+const btn = document.getElementById('inquiryBtn');
+const modal = document.getElementById('fallbackModal');
+const phoneText = document.getElementById('phoneText');
+phoneText.textContent = PHONE_NUMBER;
+
+function isMobile() {
+  return /Mobi|Android|iPhone|iPad|iPod|Phone/.test(navigator.userAgent) || navigator.maxTouchPoints > 0;
+}
+
+function openTel() {
+  window.location.href = `tel:${PHONE_NUMBER}`;
+}
+
+function showFallback() {
+  modal.classList.add('show');
+  modal.setAttribute('aria-hidden', 'false');
+}
+
+function closeModal() {
+  modal.classList.remove('show');
+  modal.setAttribute('aria-hidden', 'true');
+}
+
+document.getElementById('copyBtn').addEventListener('click', async () => {
+  try {
+    await navigator.clipboard.writeText(PHONE_NUMBER);
+    alert('नंबर कॉपी हो गया: ' + PHONE_NUMBER);
+  } catch (e) {
+    alert('कॉन्ट्रोल+C से मैन्युअली कॉपी करें: ' + PHONE_NUMBER);
+  }
+});
+
+btn.addEventListener('click', () => {
+  if (isMobile()) {
+    openTel();
+  } else {
+    showFallback();
+  }
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeModal();
+});
+
+modal.addEventListener('click', (ev) => {
+  if (ev.target === modal) closeModal();
+});
+</script>
 </body>
 </html>
